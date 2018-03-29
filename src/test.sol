@@ -45,9 +45,9 @@ contract DSTest {
     }
 
     modifier logs_gas() {
-        uint startGas = msg.gas;
+        uint startGas = gasleft();
         _;
-        uint endGas = msg.gas;
+        uint endGas = gasleft();
         emit log_named_uint("gas", startGas - endGas);
     }
 
