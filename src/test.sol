@@ -11,7 +11,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.22;
 
 contract DSTest {
     event eventListener          (address target, bool exact);
@@ -28,7 +28,7 @@ contract DSTest {
     bool public failed;
     bool SUPPRESS_SETUP_WARNING;  // hack for solc pure restriction warning
 
-    function DSTest() internal {
+    constructor() internal {
         IS_TEST = true;
     }
 
